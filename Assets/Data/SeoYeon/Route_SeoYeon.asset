@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f3ee5ee90c4b43a282c8f20fefb5a, type: 3}
+  m_Name: Route_SeoYeon
+  m_EditorClassIdentifier: Assembly-CSharp::RouteData
+  routeName: SeoYeon
+  turnList:
+  - {fileID: 11400000, guid: 9970c6f2fff3949fda15347f0af0d8c6, type: 2}
+  - {fileID: 11400000, guid: 1df3a4bd9d524492888d65265a01e498, type: 2}
+  - {fileID: 11400000, guid: 2c7ee98354ef64198bf5f28121b520c8, type: 2}
+  - {fileID: 11400000, guid: 55604d22ef1064dcf90a499850e8be53, type: 2}
+  - {fileID: 11400000, guid: b4d811a134ab74c3e9822cf671f71945, type: 2}
+  - {fileID: 11400000, guid: 478c42d050a7b49ba8940626b17027fa, type: 2}
+  - {fileID: 11400000, guid: f617b113818d14d2ca8480d46c700888, type: 2}
+  - {fileID: 11400000, guid: 31bc58d0b69e04a2ebba4944c877af77, type: 2}
+  - {fileID: 11400000, guid: 5f10e220aa76649beb64fd95e1fbf41c, type: 2}
+  - {fileID: 11400000, guid: 13cd64cd7e36b4c86953275e08df5135, type: 2}
+  - {fileID: 11400000, guid: a2f913a682ea04aba97aee7ddd695c8f, type: 2}
+  - {fileID: 11400000, guid: 1c2daea486c6846baa8d4e08c39407e2, type: 2}
+  - {fileID: 11400000, guid: 42df2d956368f47748802d1a3a22dbae, type: 2}
+  - {fileID: 11400000, guid: c27945828c5224927ab5c75710990b74, type: 2}
+  - {fileID: 11400000, guid: 574a0527e74684a448655ba4c66e633d, type: 2}
+  - {fileID: 11400000, guid: 34536b243216743c1926e5bf9d22daf5, type: 2}
+  - {fileID: 11400000, guid: 04000ae002121487d8f0a6cf12d87108, type: 2}
