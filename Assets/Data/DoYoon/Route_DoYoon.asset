@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f3ee5ee90c4b43a282c8f20fefb5a, type: 3}
+  m_Name: Route_DoYoon
+  m_EditorClassIdentifier: Assembly-CSharp::RouteData
+  routeName: DoYoon
+  turnList:
+  - {fileID: 11400000, guid: 3a05aa328dfe74cbcae4c263bf98f930, type: 2}
+  - {fileID: 11400000, guid: 78ce6b367936d42668ff5e11125d1738, type: 2}
+  - {fileID: 11400000, guid: cf01ed987ff59460b80fa995d537923c, type: 2}
+  - {fileID: 11400000, guid: b6a3cd081f42445b699cd6a4fd2a3038, type: 2}
+  - {fileID: 11400000, guid: 5757a61b11aec419e8e843a869ea163b, type: 2}
+  - {fileID: 11400000, guid: dc4fb91cd6953450ab02eb41efeddb8b, type: 2}
+  - {fileID: 11400000, guid: 5a479f7316e98484d995411bf9004f21, type: 2}
+  - {fileID: 11400000, guid: 887d9a9d9007c415a95f305c4b44d454, type: 2}
+  - {fileID: 11400000, guid: d9fd4a67497484c759728f71f649b998, type: 2}
+  - {fileID: 11400000, guid: e65192517f06a4f9ab1a6885157e25d1, type: 2}
+  - {fileID: 11400000, guid: 8ecfe09c0b0a64fdcad289bdba102db1, type: 2}
+  - {fileID: 11400000, guid: d34ade84772eb42268b6e392483573d5, type: 2}
+  - {fileID: 11400000, guid: 433a97e3271ec43c496590581ae42d1a, type: 2}
+  - {fileID: 11400000, guid: 4363c27043d504a07b27838ae9019679, type: 2}
+  - {fileID: 11400000, guid: 6dd7776b24a6e4c84a111a7ee70d2711, type: 2}
+  - {fileID: 11400000, guid: a9cf23207fb504fffaa60cfeb8ad97d9, type: 2}
+  - {fileID: 11400000, guid: 57d0393923db64d2ab816a761b666cd3, type: 2}
