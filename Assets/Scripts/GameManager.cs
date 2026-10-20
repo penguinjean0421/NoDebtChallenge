@@ -1,16 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager Instance;
 
-    [Header("현재 상태")]
+    [Header("--- Route Data ---")]
+    public RouteData doYoonRoute;
+    public RouteData seoYeonRoute;
+
+    [Header("--- Current Game ---")]
     public RouteData currentRoute;
     public int currentTurnIndex = 0;
 
-    [Header("게이지 스탯")]
+    [Header("--- Current Stats ---")]
     public int creditScore;
     public int balance;
     public int mental;
@@ -22,29 +24,64 @@ public class GameManager : MonoBehaviour
         else { Destroy(gameObject); }
     }
 
-    // 루트 선택 시 호출
-    public void SelectRoute(RouteData route)
+    void Start()
     {
+        ReturnToGameStart();
+    }
+
+    public void SelectDoYoonRoute()
+    {
+        StartRoute(doYoonRoute);
+    }
+
+    public void SelectSeoYeonRoute()
+    {
+        StartRoute(seoYeonRoute);
+    }
+
+    void StartRoute(RouteData route)
+    {
+        if (route == null) { Debug.LogError("RouteData가 할당되지 않았습니다!"); return; }
+
         currentRoute = route;
         currentTurnIndex = 0;
+
+        creditScore = route.initialCreditScore;
+        balance = route.initialBalance;
+        mental = route.initialMental;
+        favorability = route.initialFavorability;
+
+        UIManager.Instance.ShowGamePanel();
         LoadTurn(currentTurnIndex);
     }
 
-    // 턴 로드
     public void LoadTurn(int index)
     {
         if (index >= currentRoute.turnList.Count) { ShowEnding(); return; }
 
         TurnData data = currentRoute.turnList[index];
+
+        if (data.choices != null && data.choices.Count > 0)
+        {
+            for (int i = 0; i < data.choices.Count; i++)
+            {
+                int randomIndex = Random.Range(i, data.choices.Count);
+                var temp = data.choices[i];
+                data.choices[i] = data.choices[randomIndex];
+                data.choices[randomIndex] = temp;
+            }
+        }
+
         UIManager.Instance.UpdateTurnUI(data);
     }
 
     // 선택지 선택 시 처리
     public void OnSelectChoice(ChoiceData choice)
     {
+        // 정답: 스탯 변동 반영 후 다음 턴 진행
+        // 오답: 오답 팝업 출력 (동일 턴 재선택)  
         if (choice.isCorrect)
         {
-            // 정답 처리: 스탯 반영 및 다음 턴으로
             creditScore += choice.creditChange;
             balance += choice.balanceChange;
             mental += choice.mentalChange;
@@ -61,5 +98,19 @@ public class GameManager : MonoBehaviour
     void ShowEnding()
     {
         UIManager.Instance.ShowEndingUI();
+    }
+
+    public void ReturnToGameStart()
+    {
+        currentRoute = null;
+        currentTurnIndex = 0;
+        UIManager.Instance.ShowGameStartPanel();
+    }
+
+    public void ReturnToRouteSelect()
+    {
+        currentRoute = null;
+        currentTurnIndex = 0;
+        UIManager.Instance.ShowRouteSelectPanel();
     }
 }

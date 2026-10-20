@@ -4,6 +4,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewRouteData", menuName = "NoDebt/Route Data")]
 public class RouteData : ScriptableObject
 {
-    public string routeName;             // 김도윤 루트 / 박서연 루트
-    public List<TurnData> turnList;      // 17개의 TurnData 리스트
+    public string routeName;
+
+    [Header("Initial Data")]
+    public int initialCreditScore;
+    public int initialBalance;
+    public int initialMental;
+    public int initialFavorability;
+
+    [Header("Turn List")]
+    public List<TurnData> turnList;
 }

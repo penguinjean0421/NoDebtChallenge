@@ -13,7 +13,31 @@ MonoBehaviour:
   m_Name: Turn_08_DoYoon
   m_EditorClassIdentifier: Assembly-CSharp::TurnData
   turnNumber: 8
-  bgImage: {fileID: 0}
-  characterSprite: {fileID: 0}
-  scenarioText: 
-  choices: []
+  bgImage: {fileID: -1955448553306655712, guid: 05fccc6ba7da1436e9246f7aa840047d, type: 3}
+  characterSprite: {fileID: -6284777970593738257, guid: cc7e90f9f51b74ed1be16df0c0df0789, type: 3}
+  scenarioText: Turn 8
+  choices:
+  - choiceText: a
+    isCorrect: 1
+    wrongReason: 
+    hintText: 
+    creditChange: 0
+    balanceChange: 0
+    mentalChange: 0
+    favorabilityChange: 0
+  - choiceText: b
+    isCorrect: 0
+    wrongReason: 
+    hintText: 
+    creditChange: 0
+    balanceChange: 0
+    mentalChange: 0
+    favorabilityChange: 0
+  - choiceText: c
+    isCorrect: 0
+    wrongReason: 
+    hintText: 
+    creditChange: 0
+    balanceChange: 0
+    mentalChange: 0
+    favorabilityChange: 0

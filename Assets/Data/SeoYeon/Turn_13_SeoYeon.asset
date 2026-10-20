@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Turn_13_SeoYeon
   m_EditorClassIdentifier: Assembly-CSharp::TurnData
   turnNumber: 13
-  bgImage: {fileID: 0}
-  characterSprite: {fileID: 0}
+  bgImage: {fileID: -1955448553306655712, guid: 05fccc6ba7da1436e9246f7aa840047d, type: 3}
+  characterSprite: {fileID: -3617929082802779389, guid: 6dd1fbf34af034e69a9171ce81a885c0, type: 3}
   scenarioText: 
   choices: []
